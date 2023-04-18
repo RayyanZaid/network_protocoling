@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groups</title>
+  </head>
+  <body>
+    <h1>Groups</h1>
+    {% if groups %}
+    <ul>
+      {% for group in groups %}
+      <li>{{ group }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No groups have been created yet.</p>
+    {% endif %}
+    <p><a href="/">Back to Home Page</a></p>
+  </body>
+</html>

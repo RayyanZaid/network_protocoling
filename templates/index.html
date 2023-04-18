@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groups</title>
+  </head>
+  <body>
+    <h1>Create or Join a Group</h1>
+    <form action="/create" method="post">
+      <label for="group_name">Group Name:</label>
+      <input type="text" id="group_name" name="group_name"><br><br>
+      <input type="submit" value="Create Group">
+    </form>
+    <form action="/join" method="post">
+      <label for="group_name">Group Name:</label>
+      <input type="text" id="group_name" name="group_name"><br><br>
+      <input type="submit" value="Join Group">
+    </form>
+    {% if group_name %}
+    <p>New group "{{ group_name }}" created.</p>
+    {% endif %}
+    <form action="/groups">
+      <input type="submit" value="List Groups">
+    </form>
+  </body>
+</html>

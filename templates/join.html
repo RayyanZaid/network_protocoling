@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groups</title>
+  </head>
+  <body>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% elif success %}
+    <h1>Group Joined</h1>
+    <p>You have successfully joined group "{{ group_name }}".</p>
+    {% else %}
+    <h1>Join Group</h1>
+    {% endif %}
+    <form action="/join" method="post">
+      <label for="group_name">Group Name:</label>
+      <input type="text" id="group_name" name="group_name"><br><br>
+      <input type="submit" value="Join Group">
+    </form>
+    <p><a href="/">Back to Home Page</a></p>
+  </body>
+</html>
